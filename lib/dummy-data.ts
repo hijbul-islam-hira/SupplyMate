@@ -1,0 +1,113 @@
+export const DASHBOARD_STATS = [
+  { label: "Total Revenue", value: "$128,430.00", change: "+12.5%", trend: "up" },
+  { label: "Active Orders", value: "156", change: "+4.2%", trend: "up" },
+  { label: "Pending Shipments", value: "24", change: "-2.1%", trend: "down" },
+  { label: "Net Earnings", value: "$42,105.50", change: "+8.3%", trend: "up" },
+];
+
+export const PRODUCTS = [
+  {
+    id: "1",
+    name: "Aura-Sound Elite G2 Wireless Headphones",
+    category: "Electronics",
+    subCategory: "Audio",
+    price: 199.99,
+    wholesalePrice: 145.00,
+    stock: 45,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=60",
+    status: "In Stock",
+  },
+  {
+    id: "2",
+    name: "Chronos Minimalist Series X Watch",
+    category: "Fashion",
+    subCategory: "Accessories",
+    price: 349.50,
+    wholesalePrice: 220.00,
+    stock: 12,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=60",
+    status: "Low Stock",
+  },
+  {
+    id: "3",
+    name: "Velocity Nitro Pro Running Shoes",
+    category: "Sports",
+    subCategory: "Footwear",
+    price: 129.00,
+    wholesalePrice: 85.00,
+    stock: 89,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60",
+    status: "In Stock",
+  },
+  {
+    id: "4",
+    name: "Aero Gold Limited Edition Aviators",
+    category: "Fashion",
+    subCategory: "Eyewear",
+    price: 155.00,
+    wholesalePrice: 95.00,
+    stock: 0,
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&auto=format&fit=crop&q=60",
+    status: "Out of Stock",
+  },
+  {
+    id: "5",
+    name: "Omni-Connect Smart Assistant Hub",
+    category: "Electronics",
+    subCategory: "Smart Home",
+    price: 89.00,
+    wholesalePrice: 55.00,
+    stock: 32,
+    image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=800&auto=format&fit=crop&q=60",
+    status: "In Stock",
+  },
+  {
+    id: "6",
+    name: "SnapFlash Retro Instant Camera",
+    category: "Photography",
+    subCategory: "Gadgets",
+    price: 120.00,
+    wholesalePrice: 78.00,
+    stock: 15,
+    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=60",
+    status: "In Stock",
+  },
+];
+
+export const ORDERS = [
+  {
+    id: "ORD-7421",
+    customer: "Global Tech Solutions",
+    date: "2024-05-01",
+    total: "$2,450.00",
+    status: "Delivered",
+  },
+  {
+    id: "ORD-7422",
+    customer: "Creative Design Agency",
+    date: "2024-05-01",
+    total: "$850.00",
+    status: "Processing",
+  },
+  {
+    id: "ORD-7423",
+    customer: "Metro Logistics Ltd.",
+    date: "2024-04-30",
+    total: "$1,200.00",
+    status: "Shipped",
+  },
+  {
+    id: "ORD-7424",
+    customer: "Future Retail Corp",
+    date: "2024-04-29",
+    total: "$3,150.00",
+    status: "Pending",
+  },
+];
+
+export const TRANSACTIONS = [
+  { id: "TXN-001", type: "Deposit", amount: "+$5,000.00", date: "May 1, 2024", status: "Completed" },
+  { id: "TXN-002", type: "Withdrawal", amount: "-$1,200.00", date: "Apr 28, 2024", status: "Completed" },
+  { id: "TXN-003", type: "Order Payment", amount: "-$850.00", date: "Apr 25, 2024", status: "Processing" },
+  { id: "TXN-004", type: "Refund", amount: "+$240.00", date: "Apr 22, 2024", status: "Completed" },
+];
