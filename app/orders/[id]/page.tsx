@@ -12,7 +12,8 @@ import {
   MoreHorizontal,
   MapPin,
   Clock,
-  Phone
+  Phone,
+  CreditCard
 } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
