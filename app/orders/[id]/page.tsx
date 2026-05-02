@@ -66,18 +66,18 @@ export default function OrderDetailsPage() {
                     { status: "In Transit", date: "May 2, 2024", time: "11:00 PM", desc: "Arrived at sorting facility in Chicago", icon: Package, active: false },
                     { status: "Order Processed", date: "May 1, 2024", time: "3:45 PM", desc: "Order has been packed and labeled", icon: Clock, active: false },
                   ].map((step, i) => (
-                    <div key={i} className="flex gap-10">
-                      <div className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center shrink-0 border-4 border-white ${
+                    <div key={i} className="flex gap-4 lg:gap-10">
+                      <div className={`relative z-10 w-10 lg:w-12 h-10 lg:h-12 rounded-full flex items-center justify-center shrink-0 border-4 border-white ${
                         step.active ? "bg-primary text-white shadow-lg shadow-primary/30" : "bg-surface-container text-on-surface-variant"
                       }`}>
-                        <step.icon size={20} />
+                        <step.icon size={18} />
                       </div>
                       <div className="space-y-1">
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-3">
                           <p className={`font-bold ${step.active ? "text-primary" : "text-on-surface"}`}>{step.status}</p>
-                          <span className="text-xs text-on-surface-variant">{step.date} • {step.time}</span>
+                          <span className="text-[10px] lg:text-xs text-on-surface-variant">{step.date} • {step.time}</span>
                         </div>
-                        <p className="text-sm text-on-surface-variant">{step.desc}</p>
+                        <p className="text-xs lg:text-sm text-on-surface-variant">{step.desc}</p>
                       </div>
                     </div>
                   ))}

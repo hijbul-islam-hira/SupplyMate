@@ -23,7 +23,7 @@ const NAV_ITEMS = [
   { label: "Admin", href: "/admin", icon: ShieldCheck },
 ];
 
-export function Sidebar() {
+export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const pathname = usePathname();
   const [role, setRole] = React.useState<string | null>(null);
 
@@ -33,19 +33,28 @@ export function Sidebar() {
 
   const filteredItems = NAV_ITEMS.filter((item) => {
     if (role === "reseller") {
-      // Resellers don't see Dashboard (redirected to Marketplace) or Admin
       return item.href !== "/dashboard" && item.href !== "/admin";
     }
     if (role === "wholesaler") {
-      // Wholesalers see everything except maybe they shouldn't see Marketplace as their primary
-      // But for this demo, we'll let them see all.
       return item.href !== "/marketplace";
     }
     return true;
   });
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-[260px] bg-white border-r border-outline-variant flex flex-col z-50">
+    <>
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+          onClick={onClose}
+        />
+      )}
+
+      <aside className={cn(
+        "fixed left-0 top-0 bottom-0 w-[260px] bg-white border-r border-outline-variant flex flex-col z-50 transition-transform duration-300 lg:translate-x-0",
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      )}>
       <div className="p-6 flex items-center gap-3">
         <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
           <Package2 size={24} />
@@ -93,5 +102,6 @@ export function Sidebar() {
         </button>
       </div>
     </aside>
+    </>
   );
 }
